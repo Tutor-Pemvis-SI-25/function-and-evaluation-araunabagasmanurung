@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="TLAST"/>
+        <attribute name="authors" value="pc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-18 09:13:03 PM"/>
+        <attribute name="created" value="cGM7TEFQVE9QLUU3RzNCVU5FOzIwMjUtMTEtMTg7MDg6Mzk6MDQgUE07MjU1Mg=="/>
+        <attribute name="edited" value="cGM7TEFQVE9QLUU3RzNCVU5FOzIwMjUtMTEtMTg7MDk6MTM6MDMgUE07MTsyNjUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Deskripsi, KodeMK, Matkul, Dosen, Deadline, Keterangan, Status" type="String" array="True" size="10"/>
+            <declare name="TingkatKesulitan, HariDeadline" type="Integer" array="True" size="10"/>
+            <declare name="Prioritas" type="Real" array="True" size="10"/>
+            <assign variable="i" expression="0"/>
+            <while expression="True">
+                <input variable="Perintah"/>
+                <if expression="Perintah = &quot;---&quot;">
+                    <then>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="Perintah = &quot;Add task&quot;">
+                    <then>
+                        <input variable="Deskripsi"/>
+                        <input variable="KodeMK"/>
+                        <input variable="Matkul"/>
+                        <input variable="Dosen"/>
+                        <input variable="Deadline"/>
+                        <input variable="Keterangan"/>
+                        <input variable="TingkatKesulitan"/>
+                        <input variable="HariDeadline"/>
+                        <input variable="Status"/>
+                        <assign variable="Prioritas[i]" expression="TingkatKesulitan[i] * 2 + (10 - HariDeadline[i])"/>
+                        <assign variable="i" expression="i + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
