@@ -1,4 +1,5 @@
 //Arauna Manurung - 1Q2S25056
+
 import java.util.*;
 import java.lang.Math;
 
@@ -44,8 +45,8 @@ public class TLAST {
         dosen[i] = input.nextLine();
         deadline[i] = input.nextLine();
         nimnama[i] = input.nextLine();
-        tingkatkesulitan[i] = input.nextDouble();
-        harihinggadeadline[i] = input.nextInt();
+        tingkatkesulitan[i] = Double.parseDouble(input.nextLine());
+        harihinggadeadline[i] = Integer.parseInt(input.nextLine());
         status[i] = input.nextLine();
         prioritas[i] = tingkatkesulitan[i] * 1.0 / harihinggadeadline[i];
         if (prioritas[i] > 3) {
@@ -149,5 +150,3 @@ public class TLAST {
         return String.format("%." + digits + "f", value);
     }
 }
-
-
